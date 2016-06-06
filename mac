@@ -144,9 +144,9 @@ brew services restart postgresql
 
 # PhantomJS doesn't support El Capitan yet
 # https://github.com/Homebrew/homebrew/issues/42249
-if ! sw_vers -productVersion | grep -q "^10\.11"; then
-  brew_install_or_upgrade 'phantomjs'
-fi
+# if ! sw_vers -productVersion | grep -q "^10\.11"; then
+#   brew_install_or_upgrade 'phantomjs'
+# fi
 
 brew_install_or_upgrade 'hub'
 # shellcheck disable=SC2016
@@ -188,9 +188,22 @@ brew_install_or_upgrade 'brew-cask'
 
 brew_tap 'caskroom/versions'
 
-brew_cask_install 'flux'
 brew_cask_install 'github-desktop'
 brew_cask_install 'sublime-text3'
+brew_cask_install '1password'
+brew_cask_install 'audacity'
+brew_cask_install 'google-chrome'
+brew_cask_install 'imageoptim'
+brew_cask_install 'keycastr'
+brew_cask_install 'openemu'
+brew_cask_install 'rescuetime'
+brew_cask_install 'seil'
+brew_cask_install 'skype'
+brew_cask_install 'slack'
+brew_cask_install 'telegram'
+brew_cask_install 'transmission'
+brew_cask_install 'vlc'
+brew_cask_install 'xld'
 
 if [ -f "$HOME/.laptop.local" ]; then
   . "$HOME/.laptop.local"
